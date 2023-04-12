@@ -1,0 +1,175 @@
+* {
+    margin: 0%;
+    }
+
+:root {
+    --dark-violet: hsl(256, 26%, 20%);
+    --grayish-blue: hsl(216, 30%, 68%);
+    --very-dark-violet: hsl(270, 9%, 17%);
+    --dark-grayish-violet: hsl(273, 4%, 51%);
+    --light-gray: hsl(0, 0%, 98%);
+}
+
+h1, h2, h3, h4,h5, h6 {
+    font-family: 'DM Serif Display', serif;
+}
+
+h1 {
+    color:#fff;
+    font-size: 3em;
+    font-weight: 500;
+    line-height: 1;
+}
+
+h2 {
+    font-size: 3em;
+    font-weight: 400;
+    color: var(--dark-violet);
+    padding: .5em;
+}
+
+h3 {
+    font-size: 2em;
+    font-weight: 400;
+    color: var(--dark-violet);
+    padding: .5em;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    font: 16px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/*-- Header area --*/
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5em;
+} 
+
+.family_img {
+    width: 100%;
+    height: auto;
+}
+
+.squiggle-right {
+    position: absolute;
+    left: 0;
+}
+
+.squiggle-left {
+    position: absolute;
+    right: 0;
+}
+
+.plans_area {
+    background-color: var(--dark-violet);
+    padding: 5.75em 1em;
+}
+
+.plans_area p{
+    color: #fff;
+    margin: 1em;
+    padding-bottom: 1em;
+}
+
+button {
+    background-color: var(--dark-violet);
+    border: 2px solid white;
+    padding: 1em 3em;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/*-- Grid area --*/
+
+.grid-items{
+    padding-top: 9em;
+}
+
+.line{
+    background-color: rgb(190, 161, 218);
+    width: 150px;
+    margin: auto;
+    height: 1px;
+    position: relative;
+}
+
+.cards {
+    padding: 2em;
+}
+
+.card p{
+    color: var(--dark-grayish-violet);
+}
+
+/*-- 3rd Section (Find out more) */
+.find_more{
+    background-color: var(--dark-violet);
+    padding: 5.75em 1em;
+    margin: 7.5em 1em;
+    background-image: url(images/bg-pattern-how-we-work-mobile.svg);
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+
+.find_header{
+    padding-bottom: 1em;
+    font-weight: 400;
+}
+
+/*-- Footer */
+footer {
+    font-family: 'Karla', sans-serif;
+    text-transform: uppercase;
+}
+
+.footer_logo{
+    padding-top: 5em;
+    background: var(--light-gray);
+    background-image: url(images/bg-pattern-footer-mobile.svg);
+    background-repeat: no-repeat;
+    background-position-x: left;
+}
+
+hr{
+    width: 80%;
+    margin: auto;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    color: var(--dark-grayish-violet);
+    padding: 3em;
+}
+
+footer h3{
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--dark-grayish-violet);
+    font-family: 'Karla';
+}
+
+footer ul{
+    padding: 0;
+    font-weight: 400;
+}
+
+footer li {
+    list-style-type: none;
+    line-height: 2em;
+    color: var(--very-dark-violet);
+    font-weight: 600;
+}
+
+footer h3{
+    padding: 1.5em;
+}
+
+
