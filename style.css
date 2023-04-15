@@ -278,6 +278,35 @@ footer h3{
         right: 0;
     }
 
+     /*nav*/
+     .nav-center {
+        max-width: 90%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+      }
+      .nav-header {
+        padding: 0;
+      }
+      .nav-toggle {
+        display: none;
+      }
+      .links {
+        height: auto;
+        display: flex;
+        align-items: center;
+      }
+      .links a {
+        padding: 0;
+        margin: 0 0.5rem;
+      }
+      .links a:hover {
+        padding: 0;
+        background: transparent;
+      }
+
     /*main body area*/
     .line{
         position: absolute;
@@ -354,32 +383,5 @@ footer h3{
         left: 0;
     }
 
-    .nav-center {
-      max-width: 90%;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem;
-    }
-    .nav-header {
-      padding: 0;
-    }
-    .nav-toggle {
-      display: none;
-    }
-    .links {
-      height: auto;
-      display: flex;
-      align-items: center;
-    }
-    .links a {
-      padding: 0;
-      margin: 0 0.5rem;
-    }
-    .links a:hover {
-      padding: 0;
-      background: transparent;
-    }
   }
   
