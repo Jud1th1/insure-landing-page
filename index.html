@@ -9,13 +9,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap" rel="stylesheet">   
   <script src="https://kit.fontawesome.com/8bc929afbc.js" crossorigin="anonymous"></script>
-  <script src="insure.js"></script>
   <title>Insure landing page</title>
 </head>
 
 <body>
 
   <header>
+    <!-- Previous Attempt
     <div><img src="images/logo.svg" alt="Insure Logo"></div>
     <div class="nav">
       <img src="images/icon-hamburger.svg" alt="hamburger menu" class="ham_menu">
@@ -23,8 +23,27 @@
       <a href="#">Blog</a>
       <a href="#">Account</a>
       <button class="nav_btn"><a href="#">View Plans</a></button>
-    </div>
+    </div>-->
   </header>
+
+  <nav>
+    <div class="nav-center">
+        <!-- nav header-->
+        <div class="nav-header">
+            <img src="images/logo.svg" class="logo" alt="logo">
+            <button class="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <!-- links -->
+        <div class="links">
+          <a href="#">How we work</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact</a>
+          <button class="link_btn"><a href="#">View Plans</a></button>
+          </div>
+    </div>
+  </nav>
 
   <!--Humanizing your insurance-->
   <section class="plans">
@@ -39,7 +58,7 @@
     <p>Get your life insurance coverage easier and faster. We blend our expertise 
   and technology to help you find the plan that’s right for you. Ensure you 
   and your loved ones are protected.</p>
-    <button>View plans</button>
+    <button class="main_btn">View plans</button>
 
     <img src="images/bg-pattern-intro-right-mobile.svg" alt="" class="squiggle-left">
     </div>
@@ -157,6 +176,6 @@
   </div>
   </footer>
   
-
+  <script src="insure.js"></script>
 </body>
 </html>

@@ -42,41 +42,76 @@ body {
     text-align: center;
 }
 
-/*NAV BAR*/
-.nav{
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-.nav a{
-    text-decoration: none;
-    padding: 1em;
-    color: var(--dark-grayish-violet);
-}
-
-.nav a:hover{
-    color: var(--grayish-blue);
-}
-
-.nav_btn{
-    background-color: white;
-    border: 2px solid var(--dark-violet);
-}
-
-.nav_btn a{
-    color: var(--dark-violet);
-    font-weight: 600;
-}
-
-/*-- Header area --*/
-
-header {
+/*nav bar*/
+nav {
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  .nav-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5em;
-} 
+    padding: 1rem;
+  }
+  .nav-toggle {
+    font-size: 1.5rem;
+    color: var(--dark-violet);
+    background-color: white;
+    transition: all 0.3s linear;
+    cursor: pointer;
+  }
+  .nav-toggle:hover {
+    color: var(--dark-grayish-violet);
+    transform: rotate(90deg);
+  }
+  .logo {
+    height: 20px;
+  }
+  .links a {
+    color: hsl(209, 34%, 30%);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s linear;
+    text-decoration: none;
+  }
+  .links a:hover {
+    background: hsl(205, 86%, 81%);
+    color: hsl(205, 78%, 60%);
+    padding-left: 1.5rem;
+  }
+ 
+  .links {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s linear;
+  }
 
+  .show-links {
+    height: 12rem;
+    display: block;
+  }
+
+  .link_btn{
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    background-color: white;
+    border: 2px solid var(--dark-violet);
+    padding: 0.5rem;
+  }
+
+  .link_btn:hover{
+    background: var(--very-dark-violet);
+  }
+
+  .link_btn a:hover{
+    background: transparent;
+    color: #fff;
+  }
+
+/*Body area*/
 .family_img {
     width: 100%;
     height: auto;
@@ -103,7 +138,7 @@ header {
     padding-bottom: 1em;
 }
 
-button {
+.main_btn, .find_btn{
     background-color: var(--dark-violet);
     border: 2px solid white;
     padding: 1em 3em;
@@ -239,7 +274,7 @@ footer h3{
     .desksquiggle-right{
         display: block;
         position: absolute;
-        top: 6em;
+        top: 4.5em;
         right: 0;
     }
 
@@ -318,4 +353,33 @@ footer h3{
         position: absolute;
         left: 0;
     }
-}
+
+    .nav-center {
+      max-width: 90%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+    .nav-header {
+      padding: 0;
+    }
+    .nav-toggle {
+      display: none;
+    }
+    .links {
+      height: auto;
+      display: flex;
+      align-items: center;
+    }
+    .links a {
+      padding: 0;
+      margin: 0 0.5rem;
+    }
+    .links a:hover {
+      padding: 0;
+      background: transparent;
+    }
+  }
+  
