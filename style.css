@@ -3,11 +3,16 @@
     }
 
 :root {
-    --dark-violet: hsl(256, 26%, 20%);
-    --grayish-blue: hsl(216, 30%, 68%);
-    --very-dark-violet: hsl(270, 9%, 17%);
-    --dark-grayish-violet: hsl(273, 4%, 51%);
-    --light-gray: hsl(0, 0%, 98%);
+    --primary-color: #3d5a80;
+    --secondary-color: #98c1d9;
+    --accent-color: #136f63;
+    --accent-color2: #d8f3dc; /*highlight color(mobile)*/
+    --accent-color3: #25a18e;
+    
+    --light-gray: #f5f3f4;
+    --filter-color: invert(31%) sepia(68%) saturate(517%) hue-rotate(123deg) brightness(93%) contrast(88%);
+    --filter-color2: grayscale(50%);
+
 }
 
 h1, h2, h3, h4,h5, h6 {
@@ -24,14 +29,14 @@ h1 {
 h2 {
     font-size: 3em;
     font-weight: 400;
-    color: var(--dark-violet);
+    color: var(--primary-color);
     padding: .5em;
 }
 
 h3 {
     font-size: 2em;
     font-weight: 400;
-    color: var(--dark-violet);
+    color: var(--primary-color);
     padding: .5em;
 }
 
@@ -55,20 +60,21 @@ nav {
   }
   .nav-toggle {
     font-size: 1.5rem;
-    color: var(--dark-violet);
+    color: var(--primary-color);
     background-color: white;
+    border: none;
     transition: all 0.3s linear;
     cursor: pointer;
   }
   .nav-toggle:hover {
-    color: var(--dark-grayish-violet);
+    color: var(--secondary-color);
     transform: rotate(90deg);
   }
   .logo {
     height: 20px;
   }
   .links a {
-    color: hsl(209, 34%, 30%);
+    color: var(--primary-color);
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
@@ -78,8 +84,8 @@ nav {
     text-decoration: none;
   }
   .links a:hover {
-    background: hsl(205, 86%, 81%);
-    color: hsl(205, 78%, 60%);
+    background: var(--accent-color2);
+    color: var(--primary-color);
     padding-left: 1.5rem;
   }
  
@@ -98,12 +104,12 @@ nav {
     letter-spacing: 0.1rem;
     text-transform: uppercase;
     background-color: white;
-    border: 2px solid var(--dark-violet);
+    border: 2px solid var(--primary-color);
     padding: 0.5rem;
   }
 
   .link_btn:hover{
-    background: var(--very-dark-violet);
+    background: var(--primary-color);
   }
 
   .link_btn a:hover{
@@ -120,15 +126,17 @@ nav {
 .squiggle-right {
     position: absolute;
     left: 0;
+    filter: var(--filter-color);
 }
 
 .squiggle-left {
     position: absolute;
     right: 0;
+    filter: var(--filter-color);
 }
 
 .plans_area {
-    background-color: var(--dark-violet);
+    background-color: var(--primary-color);
     padding: 5.75em 1em;
 }
 
@@ -139,11 +147,17 @@ nav {
 }
 
 .main_btn, .find_btn{
-    background-color: var(--dark-violet);
+    background-color: var(--primary-color);
     border: 2px solid white;
     padding: 1em 3em;
     color: #fff;
     text-transform: uppercase;
+}
+
+.main_btn:hover, .find_btn:hover{
+    background-color:var(--accent-color3);
+    border: 2px solid white;
+    color: white;
 }
 
 /*-- Grid area --*/
@@ -153,7 +167,7 @@ nav {
 }
 
 .line{
-    background-color: rgb(190, 161, 218);
+    background-color: var(--secondary-color);
     width: 150px;
     margin: auto;
     height: 1px;
@@ -165,12 +179,16 @@ nav {
 }
 
 .card p{
-    color: var(--dark-grayish-violet);
+    color: var(--secondary-color);
+}
+
+.img_svg{
+    filter: var(--filter-color2);
 }
 
 /*-- 3rd Section (Find out more) */
 .find_more{
-    background-color: var(--dark-violet);
+    background-color: var(--primary-color);
     padding: 5.75em 1em;
     margin: 7.5em 1em;
     background-image: url(images/bg-pattern-how-we-work-mobile.svg);
@@ -206,14 +224,14 @@ hr{
     display: flex;
     justify-content: center;
     gap: 2em;
-    color: var(--dark-grayish-violet);
+    color: var(--secondary-color);
     padding: 3em;
 }
 
 footer h3{
     font-size: 1em;
     font-weight: 600;
-    color: var(--dark-grayish-violet);
+    color: var(--accent-color);
     font-family: 'Karla';
 }
 
@@ -225,7 +243,7 @@ footer ul{
 footer li {
     list-style-type: none;
     line-height: 2em;
-    color: var(--very-dark-violet);
+    color: var(--secondary-color);
     font-weight: 600;
 }
 
@@ -244,13 +262,17 @@ footer h3{
     }
 
     .plans{
-        background-color: var(--dark-violet);
+        background-color: var(--primary-color);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
 
     .plans_area{
         text-align: left;
         width: 35%;
-        padding-left: 11em;
+        padding-left: 5em;
     }
 
     .plans_area p{
@@ -260,15 +282,17 @@ footer h3{
     .desksquiggle-left{
         display: block;
         position: absolute;
-        top: 25em;
+        top: 35em;
+        left: 0;
+        filter: var(--filter-color);
     }
 
     .deskfamily_img{
         display: block;
-        position: absolute;
-        right: 20em;
-        top: 10em;
+        position: relative;
+        top: 5em;
         height: 50%;
+        height: auto;
     }
 
     .desksquiggle-right{
@@ -276,6 +300,7 @@ footer h3{
         position: absolute;
         top: 4.5em;
         right: 0;
+        filter: var(--filter-color);
     }
 
      /*nav*/
@@ -305,6 +330,11 @@ footer h3{
       .links a:hover {
         padding: 0;
         background: transparent;
+        color: var(--accent-color3);
+      }
+
+      .link_btn a:hover{
+        color: white;
       }
 
     /*main body area*/
@@ -332,17 +362,6 @@ footer h3{
 
     .find_more{
         margin: 10em;
-    }
-
-    .find_moregrid{
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-
-    .find_header{
-        width: 40%;
-        text-align: left;
     }
 
     .find_btn{
